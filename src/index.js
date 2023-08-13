@@ -6,10 +6,6 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import SlimSelect from 'slim-select';
 import 'slim-select/dist/slimselect.css';
 
-// new SlimSelect({
-//     select: '#selectElement'
-// });
-
  
 const BASE_URL = 'https://api.thecatapi.com/v1';
 const END_POINT = '/breeds';
@@ -41,7 +37,6 @@ fetchBreeds().then(arr => {
     refs.select.innerHTML = createMarkup(arr.data);
     slim();
 })
-    // .catch(error => console.log(refs.error.classList.remove('hidden')));
     .catch(error => {
         refs.loader.classList.add('hidden');
         Notify.failure(`${refs.error.textContent}`)
@@ -60,16 +55,10 @@ function onChooseBreed(e) {
         refs.catInfo.innerHTML = createCatMarkup(obj.data[0]);
         refs.loader.classList.add('hidden');
         refs.catInfo.classList.remove('hidden');
-slim();
-//         new SlimSelect({
-//     select: refs.select
-// });
     })
-        // .catch(error => console.log( refs.error.classList.remove('hidden')));
-    
-        .catch(error => {
-            refs.loader.classList.add('hidden');
-            Notify.failure(`${refs.error.textContent}`)
+    .catch(error => {
+    refs.loader.classList.add('hidden');
+    Notify.failure(`${refs.error.textContent}`)
         });
 }
 
