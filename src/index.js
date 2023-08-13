@@ -6,16 +6,6 @@ import { fetchBreeds, fetchCatByBreed } from "./cat-api"
 import { createMarkup, createCatMarkup } from "./create-markup";
 import { refs } from './refs';
 
-// const BASE_URL = 'https://api.thecatapi.com/v1';
-// const END_POINT = '/breeds';
-// const API_KEY = 'live_ca4v3X7580WRLBenOhc3r7ojPg0R64azXVOw6lW2WurksUI8Fp77LrwyCLYhJV1d';
-
-// const params = new URLSearchParams({
-//     api_key: API_KEY,
-//     page: 1,
-// });
-
-
 
 refs.select.addEventListener('change', onChooseBreed);
 
