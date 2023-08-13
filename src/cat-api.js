@@ -10,12 +10,3 @@ function fetchCatByBreed(breedId) {
     return axios.get(`https://api.thecatapi.com/v1/images/search?breed_ids=${breedId}`)
 }
 export { fetchBreeds, fetchCatByBreed }
-
-//  .then(responce => {
-//             if (!responce.ok) {
-//                 throw new Error(responce.statusText);
-//             }
-
-//             return responce.json();
-//         })
-//          .catch(error => console.log(error));
